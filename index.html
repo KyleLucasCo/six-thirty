@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>6:30</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.0/dist/index.umd.js"></script>
+	</head>
+
+	<body data-bs-theme="dark" class="vh-100 vw-100">
+		<div class="container py-5">
+			<h1 class="text-center">Is it Commander Time?</h1>
+			<div class="container">
+				<h2 class="text-center fw-bold my-2" id="answer"></h2>
+			</div>
+		</div>
+
+		<div class="container d-flex justify-content-center gap-3 fs-1" id="timer">
+			<div class="border border-primary rounded p-2" id="days"></div>
+			<div class="border border-primary rounded p-2" id="hours"></div>
+			<div class="border border-primary rounded p-2" id="minutes"></div>
+			<div class="border border-primary rounded p-2" id="seconds"></div>
+		</div>
+	</body>
+
+	<script src="script.js"></script>
+</html>
