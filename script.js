@@ -23,7 +23,7 @@ function updateTime() {
 	let minute = parseInt(parts.find((p) => p.type === "minute").value);
 
 	let isThursday = day === "Thursday";
-	let isBetween = hour >= 18 && minute >= 30 && hour < 22;
+	let isBetween = (hour > 18 || (hour === 18 && minute >= 30)) && hour < 22;
 
 	answer.innerText = isThursday && isBetween ? "Yes 👍" : "No 👎";
 	if (answer.innerText === "Yes 👍") {
