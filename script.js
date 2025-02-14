@@ -22,16 +22,6 @@ function updateTime() {
 	let hour = parseInt(parts.find((p) => p.type === "hour").value);
 	let minute = parseInt(parts.find((p) => p.type === "minute").value);
 
-	// In case of breakage revert to non-localized times.
-
-	// let day = now.getDay();
-	// let hour = now.getHours();
-	// let minute = now.getMinutes();
-	// let second = now.getSeconds();
-
-	// let isThursday = day === 4;
-	// let isSixThirty = hour === 18 && minute === 30;
-
 	let isThursday = day === "Thursday";
 	let isBetween = hour >= 18 && minute >= 30 && hour < 22;
 
@@ -43,11 +33,6 @@ function updateTime() {
 		answer.classList.remove("text-success");
 		answer.classList.add("text-danger");
 	}
-
-	// let nextThursday = new Date(now);
-	// nextThursday.setDate(now.getDate() + ((4 - now.getDay() + 7) % 7));
-	// nextThursday.setHours(18, 30, 0, 0);
-	// if (now > nextThursday) nextThursday.setDate(nextThursday.getDate() + 7);
 
 	let nextThursday = new Date();
 	nextThursday.setUTCDate(
